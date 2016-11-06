@@ -1,0 +1,29 @@
+{
+  "jobs": [
+    {
+      "name": "Dust farmer",
+      "id": 1,
+      "description": "Growing dust."
+    },
+    {
+      "name": "Alien hunter",
+      "id": 2,
+      "description": "Providing delicious aliens for dinner"
+    },
+    {
+      "name": "Battery technician",
+      "id": 3,
+      "description": "Keeping the lights on."
+    },
+    {
+      "name": "Yoga teacher",
+      "id": 4,
+      "description": "Stay limber on the red planet."
+    },
+    {
+      "name": "Front-end developer",
+      "id": 5,
+      "description": "Needed, even on Mars."
+    }
+  ]
+}

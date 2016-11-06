@@ -1,0 +1,19 @@
+<div class="page-container">
+  <h1>Report an Alien Encounter</h1>
+  <form (ngSubmit)="onSubmit()" #encounterForm="ngForm">
+    <div>
+      <label for="type">Alien Type</label>
+      <div class="custom-select">
+        <select class="form-control" [(ngModel)]="encounter.atype" name="atype" required>
+          <option value="(none)">Select an Alien</option>
+          <option *ngFor="let alien of allAliens">{{alien.type}}</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label for="details">Details of Encounter</label>
+      <textarea [(ngModel)]="encounter.details" name="details" required></textarea>
+    </div>
+    <button routerLink="/encounters" type="submit" [disabled]="noAlien || !encounterForm.form.valid">Submit</button>
+  </form>
+</div>

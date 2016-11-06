@@ -1,0 +1,23 @@
+{
+  "colonists": [
+    {
+      "name": "Johnny",
+      "job": {
+        "name": "Battery technician",
+        "id": 3,
+        "description": "Keeping the lights on."
+      },
+      "id": 555,
+      "age": 34
+    },
+    {
+      "name": "Johnny",
+      "job": {
+        "name": "Yoga teacher",
+        "id": 4,
+        "description": "Stay limber on the red planet."
+      },
+      "id": 556,
+      "age": 78
+    },
+    }

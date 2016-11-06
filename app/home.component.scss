@@ -1,0 +1,27 @@
+.page-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(237, 67, 67, 0.7)), url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+	flex-direction: column;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0 1rem;
+}
+
+.enter-button a {
+	display: block;
+	width: 75px;
+	height: 75px;
+	background: rgba(237, 237, 237, 0.2);
+	opacity: 0.2;
+	border-radius: 50%;
+	animation: border-pulse 2s infinite;
+}
+
+h2 {
+	text-align: center;
+}
