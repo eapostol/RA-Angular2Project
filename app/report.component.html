@@ -5,15 +5,15 @@
       <label for="type">Alien Type</label>
       <div class="custom-select">
         <select class="form-control" [(ngModel)]="encounter.atype" name="atype" required>
-          <option value="(none)">Select an Alien</option>
-          <option *ngFor="let alien of allAliens">{{alien.type}}</option>
+          <option value="(none)" selected>Select an Alien</option>
+          <option *ngFor="let alien of allAliens" [value]="alien.type">{{alien.type}}</option>
         </select>
       </div>
     </div>
     <div>
       <label for="details">Details of Encounter</label>
-      <textarea [(ngModel)]="encounter.details" name="details" required></textarea>
+      <textarea [(ngModel)]="encounter.action" name="action" required></textarea>
     </div>
-    <button routerLink="/encounters" type="submit" [disabled]="noAlien || !encounterForm.form.valid">Submit</button>
+    <button type="submit" [disabled]="noAlien || !encounterForm.form.valid">Submit</button>
   </form>
 </div>

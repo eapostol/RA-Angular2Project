@@ -9,12 +9,13 @@ import { AllJobs } from './model/AllJobs';
 import { JobService } from './job.service';
 import { Colonist } from './model/Colonist';
 import { ColonistsService } from './colonists.service';
+import { LocalStorageWorker} from './model/Local_storage_worker';
 
 @Component({
     selector: 'arrival',
     templateUrl: './app/arrival.component.html',
     styleUrls: [ './app/arrival.component.scss' ],
-    providers: [JobService, ColonistsService]
+    providers: [JobService, ColonistsService, LocalStorageWorker]
 })
 
 export class ArrivalComponent implements OnInit {
@@ -24,12 +25,9 @@ export class ArrivalComponent implements OnInit {
     NO_OCCUPATION_SELECTED = '(none)';
     NO_VALUE: any;
 
-
-
-
-    constructor(private jobService: JobService, private colonistsService: ColonistsService, private router:Router) {
+    constructor(private jobService: JobService, private colonistsService: ColonistsService, private router:Router, public localStorage: LocalStorageWorker) {
         this.job = new Job(this.NO_VALUE, this.NO_OCCUPATION_SELECTED, '');
-        this.colonist = new Colonist('', (this.job), this.NO_VALUE, this.NO_VALUE,);
+        this.colonist = new Colonist('', (this.job), this.NO_VALUE, this.NO_VALUE, this.NO_VALUE);
         //console.log('this.colonist.name = ' + this.colonist.name);
     }
 
@@ -41,7 +39,7 @@ export class ArrivalComponent implements OnInit {
         this.jobService.getJobs()
             .then(allJobs => {
                 this.allJobs = (allJobs as AllJobs).jobs;
-                console.log(this.allJobs);
+                //console.log(this.allJobs);
             });
 
     }
@@ -53,7 +51,6 @@ export class ArrivalComponent implements OnInit {
     onSubmit(){
         for (let j in this.allJobs) {
             if (this.allJobs[j].name == this.colonist.job.name) {
-                console.log('you match and made it into the loop');
                 this.colonist.job.id = this.allJobs[j].id;
                 this.colonist.job_id = String(this.allJobs[j].id);
                 this.colonist.job.description = this.allJobs[j].description;
@@ -64,20 +61,13 @@ export class ArrivalComponent implements OnInit {
             .newColonist(this.colonist)
             .then(colonist => {
                 this.router.navigateByUrl('/encounters');
+                this.localStorage.clear();
                 //set colonist id to local storage
-                this.setLocalStorage(colonist);
+                this.localStorage.add('ColonistId', String(colonist.id));
+                //this.setLocalStorage(colonist);
             })
 
     }
 
-    setLocalStorage(colonist){
-        if (typeof (Storage) != undefined){
-            let ls= localStorage;
-            ls.setItem(colonist.name, colonist.id);
-        }  else {
-            console.log('Cody says you need a new browser! boo');
-            return
-        }
-    }
 
 }
