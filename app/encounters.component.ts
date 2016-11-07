@@ -19,6 +19,7 @@ export class EncountersComponent implements OnInit {
     allEncounters: Encounter[];
     allColonists: Colonist[];
 
+
     constructor(private encountersService: EncountersService, private colonistsService: ColonistsService) {
 
     }
@@ -36,12 +37,14 @@ export class EncountersComponent implements OnInit {
 
     getColonists(): void {
         this.colonistsService.getColonists()
-            .then(allColonists => {this.allColonists = ((allColonists as Colonists).colonists).slice(0, 100); console.log(this.allColonists);})
+            .then(allColonists => {
+                this.allColonists = ((allColonists as Colonists).colonists);
+
+            })
     }
 
     ngOnInit(): void {
         this.getEncounters();
         this.getColonists();
-        //this.prepareOutput();
     }
 }

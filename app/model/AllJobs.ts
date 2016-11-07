@@ -8,6 +8,5 @@ export class AllJobs implements iJobs {
         this.jobs = newJobs;
 
         return this;
-        //return this.allJobs as Job[];
     }
 }

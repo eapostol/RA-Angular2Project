@@ -28,7 +28,4 @@ export class JobService {
         return Promise.reject(error.message || error);
     }
 
-    //getJobs(): Promise<Job[]> {
-     //   return Promise.resolve(JOBS);
-   // }
 }

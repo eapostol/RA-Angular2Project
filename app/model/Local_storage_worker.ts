@@ -12,7 +12,6 @@ export class LocalStorageWorker {
         }
     }
 
-
     // get one item by key from storage
     get(key: string): string {
         if (this.localStorageSupported) {

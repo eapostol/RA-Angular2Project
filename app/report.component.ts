@@ -74,4 +74,8 @@ export class ReportComponent implements OnInit {
             })
 
     }
+
+    get noAlien() {
+        return this.encounter.atype === this.NO_ALIEN_SELECTED;
+    }
 }

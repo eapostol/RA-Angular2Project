@@ -8,6 +8,5 @@ export class AllAliens implements iAllAliens {
         this.aliens = newAliens;
 
         return this;
-        //return this.allJobs as Job[];
     }
 }

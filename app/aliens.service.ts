@@ -18,7 +18,6 @@ export class AliensService {
         let y = x.toPromise();
         //console.log(y);
         let z = y.then(response => response.json()).catch(this.handleError);
-        //console.log(z instanceof Promise);
         console.log(z);
 
         return z
