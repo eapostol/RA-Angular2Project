@@ -23,17 +23,15 @@ export class EncountersComponent implements OnInit {
 
     }
 
-    /*
-    prepareOutput() {
-        for (let x in this.allEncounters) {
-            let encDate = this.allEncounters[x].date;
-            console.log(encDate);
-        }
-    } */
-
     getEncounters(): void {
         this.encountersService.getEncounters()
-            .then(allEncounters => {this.allEncounters = ((allEncounters as AllEncounters).encounters).slice(0, 5); console.log(this.allEncounters);});
+            .then(allEncounters => {
+                this.allEncounters = ((allEncounters as AllEncounters).encounters);
+                let endNum: number = this.allEncounters.length;
+                let startNum: number = this.allEncounters.length - 8;
+                this.allEncounters = this.allEncounters.slice(startNum, endNum);
+
+                console.log(this.allEncounters);});
     }
 
     getColonists(): void {

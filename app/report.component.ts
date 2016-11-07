@@ -36,10 +36,11 @@ export class ReportComponent implements OnInit {
     }
 
     getDate(){
-        let today = new Date;
-        let dd = today.getDate();
-        let mm = today.getMonth()+1; //January is 0!
-        let yyyy = today.getFullYear();
+        let today: any = new Date;
+        let dd: any = today.getDate();
+        let mm: any = today.getMonth()+1; //January is 0!
+        let yyyy: any = today.getFullYear();
+
 
         if(dd<10) {
             dd='0'+dd
@@ -49,8 +50,8 @@ export class ReportComponent implements OnInit {
             mm='0'+mm
         }
 
-        today = yyyy+'-'+mm+'-'+dd;
-        return today;
+        let todaysDate:string = yyyy+'-'+mm+'-'+dd;
+        return todaysDate;
     }
 
     getEncounters(): void {
