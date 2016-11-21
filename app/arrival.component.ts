@@ -48,6 +48,7 @@ export class ArrivalComponent implements OnInit {
         this.getJobs();
     }
 
+
     onSubmit(){
         for (let j in this.allJobs) {
             if (this.allJobs[j].name == this.colonist.job.name) {
