@@ -5,7 +5,7 @@
       <label for="type">Alien Type</label>
       <div class="custom-select">
         <select class="form-control" [(ngModel)]="encounter.atype" name="atype" required>
-          <option value="(none)" selected>Select an Alien</option>
+          <option value="(none)" selected disabled="disabled">Select an Alien</option>
           <option *ngFor="let alien of allAliens" [value]="alien.type">{{alien.type}}</option>
         </select>
       </div>

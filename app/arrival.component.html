@@ -1,13 +1,13 @@
 <div class="page-container arrival">
     <h1>Register</h1>
 
-    <form (ngSubmit)="onSubmit()" #arrivalForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #arrivalForm="ngForm" novalidate>
         <fieldset>
             <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name"  required>
             <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age" required>
             <div class="custom-select">
-                <select [(ngModel)]="colonist.job.name" name="jobName">
-                    <option value="NO_OCCUPATION_SELECTED" selected>Select an Occupation</option>
+                <select [(ngModel)]="colonist.job.name" name="jobName" required>
+                    <option value="NO_OCCUPATION_SELECTED" selected disabled="disabled">Select an Occupation</option>
                     <option *ngFor="let job of allJobs" [value]="job.name">{{job.name}}</option>
                 </select>
             </div>
