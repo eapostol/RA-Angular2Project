@@ -33,7 +33,7 @@
         main: './main.js',
         defaultExtension: 'js'
       },
-      baseURL: '/app' ,
+      baseURL: '/RA-Angular2Project/' ,
       rxjs: {
         defaultExtension: 'js'
       },
