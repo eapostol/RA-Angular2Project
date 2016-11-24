@@ -33,7 +33,7 @@
         main: './main.js',
         defaultExtension: 'js'
       },
-      baseURL: '/' ,
+      baseURL: '/app' ,
       rxjs: {
         defaultExtension: 'js'
       },
