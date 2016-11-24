@@ -27,13 +27,13 @@
       'rxjs':                       'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
     },
+    //   baseURL: '/RA-Angular2Project/' ,
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
       app: {
         main: './main.js',
         defaultExtension: 'js'
       },
-      baseURL: '/RA-Angular2Project/' ,
       rxjs: {
         defaultExtension: 'js'
       },
