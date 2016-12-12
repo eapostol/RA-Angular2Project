@@ -1,0 +1,16 @@
+{
+  "name": "RA-Angular2Project",
+  "description": "Test Angular2 Project for Caitlin D",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
