@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/toPromise');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/toPromise");
 var ColonistsService = (function () {
     function ColonistsService(http) {
         this.http = http;
@@ -37,11 +37,11 @@ var ColonistsService = (function () {
             .then(function (res) { return res.json().colonist; })
             .catch(this.handleError);
     };
-    ColonistsService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], ColonistsService);
     return ColonistsService;
 }());
+ColonistsService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], ColonistsService);
 exports.ColonistsService = ColonistsService;
 //# sourceMappingURL=colonists.service.js.map

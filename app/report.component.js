@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var aliens_service_1 = require('./aliens.service');
-var encounters_service_1 = require('./encounters.service');
-var Encounter_1 = require('./model/Encounter');
-var Local_storage_worker_1 = require('./model/Local_storage_worker');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var aliens_service_1 = require("./aliens.service");
+var encounters_service_1 = require("./encounters.service");
+var Encounter_1 = require("./model/Encounter");
+var Local_storage_worker_1 = require("./model/Local_storage_worker");
 var ReportComponent = (function () {
     function ReportComponent(aliensService, encountersService, router, localStorage) {
         this.aliensService = aliensService;
@@ -67,16 +67,16 @@ var ReportComponent = (function () {
         enumerable: true,
         configurable: true
     });
-    ReportComponent = __decorate([
-        core_1.Component({
-            selector: 'report',
-            templateUrl: './app/report.component.html',
-            styleUrls: ['./app/report.component.css'],
-            providers: [aliens_service_1.AliensService, encounters_service_1.EncountersService, Local_storage_worker_1.LocalStorageWorker]
-        }), 
-        __metadata('design:paramtypes', [aliens_service_1.AliensService, encounters_service_1.EncountersService, router_1.Router, Local_storage_worker_1.LocalStorageWorker])
-    ], ReportComponent);
     return ReportComponent;
 }());
+ReportComponent = __decorate([
+    core_1.Component({
+        selector: 'report',
+        templateUrl: './app/report.component.html',
+        styleUrls: ['./app/report.component.css'],
+        providers: [aliens_service_1.AliensService, encounters_service_1.EncountersService, Local_storage_worker_1.LocalStorageWorker]
+    }),
+    __metadata("design:paramtypes", [aliens_service_1.AliensService, encounters_service_1.EncountersService, router_1.Router, Local_storage_worker_1.LocalStorageWorker])
+], ReportComponent);
 exports.ReportComponent = ReportComponent;
 //# sourceMappingURL=report.component.js.map

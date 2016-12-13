@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/toPromise');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/toPromise");
 var EncountersService = (function () {
     function EncountersService(http) {
         this.http = http;
@@ -38,11 +38,11 @@ var EncountersService = (function () {
             .then(function (res) { return res.json().encounter; })
             .catch(this.handleError);
     };
-    EncountersService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], EncountersService);
     return EncountersService;
 }());
+EncountersService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], EncountersService);
 exports.EncountersService = EncountersService;
 //# sourceMappingURL=encounters.service.js.map
