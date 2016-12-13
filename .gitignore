@@ -17,3 +17,5 @@ _temp
 !wallaby.js
 
 README.md.old
+
+npm-debug.log
