@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var encounters_service_1 = require('./encounters.service');
-var colonists_service_1 = require('./colonists.service');
+var core_1 = require("@angular/core");
+var encounters_service_1 = require("./encounters.service");
+var colonists_service_1 = require("./colonists.service");
 var EncountersComponent = (function () {
     function EncountersComponent(encountersService, colonistsService) {
         this.encountersService = encountersService;
@@ -38,16 +38,16 @@ var EncountersComponent = (function () {
         this.getEncounters();
         this.getColonists();
     };
-    EncountersComponent = __decorate([
-        core_1.Component({
-            selector: 'encounters',
-            templateUrl: './app/encounters.component.html',
-            styleUrls: ['./app/encounters.component.scss'],
-            providers: [encounters_service_1.EncountersService, colonists_service_1.ColonistsService]
-        }), 
-        __metadata('design:paramtypes', [encounters_service_1.EncountersService, colonists_service_1.ColonistsService])
-    ], EncountersComponent);
     return EncountersComponent;
 }());
+EncountersComponent = __decorate([
+    core_1.Component({
+        selector: 'encounters',
+        templateUrl: './app/encounters.component.html',
+        styleUrls: ['./app/encounters.component.scss'],
+        providers: [encounters_service_1.EncountersService, colonists_service_1.ColonistsService]
+    }),
+    __metadata("design:paramtypes", [encounters_service_1.EncountersService, colonists_service_1.ColonistsService])
+], EncountersComponent);
 exports.EncountersComponent = EncountersComponent;
 //# sourceMappingURL=encounters.component.js.map

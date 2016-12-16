@@ -8,13 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var Job_1 = require('./model/Job');
-var job_service_1 = require('./job.service');
-var Colonist_1 = require('./model/Colonist');
-var colonists_service_1 = require('./colonists.service');
-var Local_storage_worker_1 = require('./model/Local_storage_worker');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var Job_1 = require("./model/Job");
+var job_service_1 = require("./job.service");
+var Colonist_1 = require("./model/Colonist");
+var colonists_service_1 = require("./colonists.service");
+var Local_storage_worker_1 = require("./model/Local_storage_worker");
 var ArrivalComponent = (function () {
     function ArrivalComponent(jobService, colonistsService, router, localStorage) {
         this.jobService = jobService;
@@ -64,16 +64,16 @@ var ArrivalComponent = (function () {
             //this.setLocalStorage(colonist);
         });
     };
-    ArrivalComponent = __decorate([
-        core_1.Component({
-            selector: 'arrival',
-            templateUrl: './app/arrival.component.html',
-            styleUrls: ['./app/arrival.component.scss'],
-            providers: [job_service_1.JobService, colonists_service_1.ColonistsService, Local_storage_worker_1.LocalStorageWorker]
-        }), 
-        __metadata('design:paramtypes', [job_service_1.JobService, colonists_service_1.ColonistsService, router_1.Router, Local_storage_worker_1.LocalStorageWorker])
-    ], ArrivalComponent);
     return ArrivalComponent;
 }());
+ArrivalComponent = __decorate([
+    core_1.Component({
+        selector: 'arrival',
+        templateUrl: './app/arrival.component.html',
+        styleUrls: ['./app/arrival.component.scss'],
+        providers: [job_service_1.JobService, colonists_service_1.ColonistsService, Local_storage_worker_1.LocalStorageWorker]
+    }),
+    __metadata("design:paramtypes", [job_service_1.JobService, colonists_service_1.ColonistsService, router_1.Router, Local_storage_worker_1.LocalStorageWorker])
+], ArrivalComponent);
 exports.ArrivalComponent = ArrivalComponent;
 //# sourceMappingURL=arrival.component.js.map
