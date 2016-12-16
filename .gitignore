@@ -19,3 +19,9 @@ _temp
 README.md.old
 
 npm-debug.log
+
+.firebaserc
+
+database.rules.json
+
+firebase.json
