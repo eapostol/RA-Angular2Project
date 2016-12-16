@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <base href="/">
+      <base href="/RA-Angular2Project/"><!-- set to directory you are hosting -->
     <!-- <base href="/RA-Angular2Project/"> -->
     <title>Mars Colony 1</title>
     <meta charset="UTF-8">
@@ -13,6 +13,21 @@
     <script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
     <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script> -->
 
+    <!-- add firebase -->
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC1aJJNDqN8rO6zgFr9fNx84iO0iz21Y6A",
+        authDomain: "ra-angular02-caitlind-test01.firebaseapp.com",
+        databaseURL: "https://ra-angular02-caitlind-test01.firebaseio.com",
+        storageBucket: "ra-angular02-caitlind-test01.appspot.com",
+        messagingSenderId: "711670893245"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- end firebase -->
     <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
 
     <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
@@ -22,7 +37,10 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-     System.import('app').catch(function(err){ console.error(err); });
+      var errFn = function(err){
+          //console.error(err);
+      };
+     System.import('app').catch(errFn);
     </script>
   </head>
 
