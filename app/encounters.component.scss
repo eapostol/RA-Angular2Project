@@ -33,3 +33,14 @@ footer {
 	flex-direction: column;
 	min-height:100px;
 }
+
+button {
+	background-color: #000;
+	min-height:100px;
+	border-radius: 0;
+	font-size: 14px;
+}
+
+button:hover {
+	background-color: #555;
+}
